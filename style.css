@@ -1,0 +1,143 @@
+body {
+  background: #f2f2f2;
+  font-family: sans-serif;
+}
+
+.con {
+  display: flex;
+  padding: 0rem 1rem;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  overflow:hidden;
+  z-index: 1000;
+}
+
+
+body {
+  height: 100%;
+  background: #f2f2f2;
+}
+
+
+.lazybackground {
+ position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 20%;
+  overflow-x: hidden;
+}
+
+.lazybackground>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 80%;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ margin: 0.5rem;
+  gap: 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: black;
+  color: white;
+  border-radius: 20px;
+  opacity: 0.8;
+  position: sticky;
+  top:0.5rem;
+  z-index: 1000000;
+}
+
+input {
+  flex-grow: 1;
+  border: none;
+  border-bottom: white 3px solid;
+  background: none;
+  color: white;
+  outline: none;
+}
+
+/*temp*/
+.tempsection {
+  width: 80%;
+  background: white;
+  border-radius: 20px;
+  margin-top: 3rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.temp,
+.map {
+  width: 50%;
+  height: 20rem;
+}
+
+.temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info {
+  font-size: 2rem;
+}
+
+.more {
+  border-top: black solid 2px;
+  width: 50%;
+  color: gray;
+}
+/*more1*/
+.more1 {
+  width: 80%;
+  background: white;
+  border-radius: 20px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-direction: column;
+}
+.more1>p{
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  gap:0.3rem;
+}
+.underborder{
+  border-bottom: 1px solid black;
+}
+
+/*res*/
+@media screen and (max-width:480px) {
+  .tempsection {
+    flex-direction: column;
+  }
+
+  .temp,
+  .map {
+    width: 100%;
+  }
+  
+  .lazybackground{
+    height:60%;
+  }
+}
+
+
+/*copyright*/ .copyright{ position: fixed; top:3rem; right: 1rem; background: #1425E3; color:white; border:2px; width: 2rem; height: 2rem; border-radius: 5px; } 

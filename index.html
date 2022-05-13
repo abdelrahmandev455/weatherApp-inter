@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <title>Weather App-beginner</title>
+  <!-- HTML -->
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="lazybackground">
+    <img src="bg.jpg" alt="">
+  </div>
+  <div class="con">
+    <!--search input-->
+    <nav>
+      <span>Weather App</span>
+      <input type="search" placeholder="Search" id="input" value="berlin">
+      
+    </nav>
+    <!--temp section-->
+    <div class="tempsection" data-aos="fade-down">
+
+      <div class="temp">
+        <div class="info">
+          <img id="icon" src="" alt="">
+          <span id="tempp">30</span>°C
+        </div>
+        <div class="more">
+          <p>Feels Like : <span id="feelslike">cannot read data</span></p>
+          <p>Humidity : <span id="humidity">
+              cannot read data
+            </span></p>
+        </div>
+      </div>
+
+      <div class="map" id="map">
+      </div>
+    </div>
+    <div class="more1" data-aos="fade-up">
+      <p class="underborder"><img src="https://img.icons8.com/color/34/000000/hot.png" />Max tempature: <span id="maxtemp">cannot read data</span>°C</p>
+      <p class="underborder"><img src="https://img.icons8.com/color/34/000000/cold.png" />Min tempature: <span id="mintemp">cannot read data</span>°C</p>
+      <p class="underborder"> <img src="https://img.icons8.com/office/34/000000/pressure.png" />Pressure: <span id="pressure">cannot read data</span></p>
+      <p class="underborder"> <img src="https://img.icons8.com/office/34/000000/earth-element.png" /> Ground level: <span id="grnd_level">cannot read data</span></p>
+      <p class="underborder"> <img src="https://img.icons8.com/external-flat-wichaiwi/34/000000/external-description-business-flat-wichaiwi.png" /> Description: <span id="description">cannot read data</span></p>
+    </div>
+    <div class="more1" data-aos="fade-left">
+      <p class="underborder"><img src="https://img.icons8.com/office/34/000000/240-degrees.png"/>Wind Degrees: <span id="winddeg">cannot read data</span>°C</p>
+      <p class="underborder"><img src="https://img.icons8.com/tiny-color/34/000000/experimental-wind-tiny-color.png"/>Wind Speed: <span id="windspeed">cannot read data</span>km/h</p>
+      <p class="underborder"> <img src="https://img.icons8.com/fluency/34/000000/water-wind-turbine.png"/>Wind Gust: <span id="windgust">cannot read data</span></p>
+    </div>
+     <div class="more1" data-aos="fade-right">
+      <p class="underborder"><img src="https://img.icons8.com/color/34/000000/map-pin.png"/>Name: <span id="name">cannot read data</span></p>
+      <p class="underborder"><img src="https://img.icons8.com/office/34/000000/timezone-4.png"/>Timezone: <span id="timezone">cannot read data</span></p>
+      <p class="underborder"><img src="https://img.icons8.com/clouds/34/000000/google-earth.png"/>Latuide: <span id="lat">cannot read data</span>°</p>
+      <p class="underborder"> <img src="https://img.icons8.com/clouds/34/000000/google-earth.png"/>Lontuide: <span id="lon">cannot read data</span>°</p>
+    </div>
+    <!--cooyright--> <button class="copyright">C</button> 
+    <!-- Project -->
+    <script type="module" src="./js/main.js">
+    </script>
+    <script>
+      AOS.init()
+    </script>
+</body>
+
+</html>
